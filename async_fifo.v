@@ -75,7 +75,7 @@ assign wr_bin_next=wr_bin+(wr_en & !full);
 assign wr_g_next= (wr_bin_next)^(wr_bin_next>>1);
 assign wr_address=wr_dff2[ADD_WIDTH-1:0];
 
-assign full_val= (wr_g_next == {!(rd_g_s2[ADD_WIDTH:ADD_WIDTH-1]),(rd_g_s2[ADD_WIDTH-1:0])});
+assign full_val= (wr_g_next == {!(rd_g_s2[ADD_WIDTH]),(rd_g_s2[ADD_WIDTH-1:0])});
 
 
 
